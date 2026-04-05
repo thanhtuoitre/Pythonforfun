@@ -1,17 +1,19 @@
-"""Viết chương trình nhập mảng gồm n phần tử.
+"""
+1.	Viết chương trình nhập mảng gồm n phần tử.
 Số nguyên dương n được nhập từ bàn phím.
-In ra mảng và tính tổng các phần tử"""
+In ra mảng và tính tổng các phần tử
+"""
 
-n = int(input("Nhập n: "))
-if n<=0:
-    print("Phải nhập số tự nhiên")
-else:
-    a= []
-    tong=0
+n = int(input("Nhập vào n phần tử của mảng:"))
+a = []
+tong = 0
+
+if n > 0:
     for i in range(n):
-        a.append(float(input("Nhập số thứ %d: "%(i+1))))
+        a.append(float(input("Nhập vào phần tử thứ: %d:" % (i + 1))))
         tong = tong + a[i]
-    print(a)
-    print("Tổng các số vừa nhập xong là: ",tong)
+else:
+    print("Bạn nhập sai giá trị rồi")
 
-
+print("Dãy số bạn vừa nhập là:",a)
+print(f"Tổng của dãy số vừa nhập: {tong}")

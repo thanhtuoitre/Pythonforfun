@@ -1,6 +1,7 @@
-"""Nhập vào một giá trị độ C, in ra giá trị độ F tương ứng, biết F = (9.0/5.0 x C) + 32"""
+"""
+1.	Nhập vào một giá trị độ C, in ra giá trị độ F tương ứng, biết F = (9.0/5.0 x C) + 32
+"""
 
-print("Nhập vào độ C:")
-C = float(input())
-doF: float = (9.0 / 5.0 * C)
-print(f"Độ F vừa tính được là :{doF:.2f}")
+doC = float(input("Nhập vào độ C:"))
+doF = (9.0/5.0 * doC ) + 32
+print(f"Độ F tương ứng với {doC} là: {doF:.2f}")

@@ -1,22 +1,17 @@
-"""Viết chương trình tìm giá trị lớn nhất
-trong 3 số nguyên nhập vào từ bàn phím"""
+"""
+Viết chương trình nhập vào dãy A gồm n phần tử và in ra dãy số được sắp xếp theo thứ tự tăng dần.
+"""
 
-print("Nhập vào số nguyên thứ nhất: ")
-so1 = int(input())
+n = int(input("Nhập vào n phần tử:"))
+a = []
 
-print("Nhập vào số nguyên thứ hai: ")
-so2 = int(input())
-
-print("Nhập vào số nguyên thứ ba: ")
-so3 = int(input())
-1
-solonnhat = 0
-
-if so1<so2 and so2<so3:
-    max = so3
-elif so1>so2 and so1<so3:
-    max = so2
+if n > 0:
+    for i in range(n):
+        a.append(input("Nhập vào phần tử thứ %d :"%(i+1)))
+    print("Dãy số bạn vừa nhập vào là:",a)
+    a.sort()
+    print("Dãy số sau khi được sắp xếp theo thứ tự tăng dần:",a)
 else:
-    max = so1
+    print("Bạn nhập sai giá trị n rồi")
 
-print(f"Số lớn nhất là {max}")
+
