@@ -1,22 +1,19 @@
-"""
-Viết chương trình nhập n số, xoá số thứ k trong n số vừa nhập. In ra n-1 số còn lại
-"""
+"""Viết chương trình nhập vào dãy A gồm n phần tử và
+in ra dãy số được sắp xếp theo thứ tự tăng dần."""
 
-n = int(input("Nhập vào n: "))
-a = []
+try:
+    n = int(input("Nhập vào n phần tử:"))
+    if n > 0:
+        a = []
+        for i in range(n):
+            a.append(float(input("Nhập vào phần tử thứ %d :"%(i+1))))
 
-if n > 0:
-    for i in range(n):
-        a.append(input("Nhập vào phần tử thứ %d: "%(i+1)))
-    print("Dãy số bạn vừa nhập là ",a)
-else:
-    print("Bạn nhập sai rồi")
+        print("Dãy a vừa nhập là",a)
 
-k = int(input("Nhập vào phần tử k muốn xóa:"))
-if k<0 or k>len(a):
-    print("Bạn nhập sai giá trị k")
-else:
-    del a[k-1]
-    print("Dãy số sau khi xóa",a)
+        a.sort()
+        print("Dãy a sau khi được sắp xếp theo thứ tự tăng dần:",a)
+    else:
+        print("n phải là số nguyên dương")
 
-
+except ValueError:
+    print("Nhập sai kiểu giá trị!")
